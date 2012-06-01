@@ -18,6 +18,7 @@
 		26013377157956EC00526BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601335E157956EB00526BDF /* Foundation.framework */; };
 		2601337F157956EC00526BDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2601337D157956EC00526BDF /* InfoPlist.strings */; };
 		26013382157956EC00526BDF /* QuirkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26013381157956EC00526BDF /* QuirkleTests.m */; };
+		26013390157957E900526BDF /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2601338F157957E900526BDF /* TODO.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2601337E157956EC00526BDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		26013380157956EC00526BDF /* QuirkleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuirkleTests.h; sourceTree = "<group>"; };
 		26013381157956EC00526BDF /* QuirkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuirkleTests.m; sourceTree = "<group>"; };
+		2601338F157957E900526BDF /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		2601334D157956EB00526BDF = {
 			isa = PBXGroup;
 			children = (
+				2601338F157957E900526BDF /* TODO.txt */,
 				26013362157956EB00526BDF /* Quirkle */,
 				2601337A157956EC00526BDF /* QuirkleTests */,
 				2601335B157956EB00526BDF /* Frameworks */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26013367157956EB00526BDF /* InfoPlist.strings in Resources */,
+				26013390157957E900526BDF /* TODO.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +417,7 @@
 				26013387157956EC00526BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26013388157956EC00526BDF /* Build configuration list for PBXNativeTarget "QuirkleTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				2601338A157956EC00526BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
