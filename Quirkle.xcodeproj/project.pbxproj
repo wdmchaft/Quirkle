@@ -20,6 +20,7 @@
 		26013390157957E900526BDF /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2601338F157957E900526BDF /* TODO.txt */; };
 		2601339815795A2C00526BDF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2601339715795A2C00526BDF /* MainStoryboard.storyboard */; };
 		2601339B15795A4500526BDF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339A15795A4500526BDF /* MainViewController.m */; };
+		2601339B15795A4500526BE1 /* TokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE0 /* TokenTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2601339715795A2C00526BDF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2601339915795A4500526BDF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		2601339A15795A4500526BDF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2601339B15795A4500526BE0 /* TokenTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		2601337A157956EC00526BDF /* QuirkleTests */ = {
 			isa = PBXGroup;
 			children = (
+				2601339B15795A4500526BE0 /* TokenTest.m */,
 				2601337B157956EC00526BDF /* Supporting Files */,
 			);
 			path = QuirkleTests;
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2601339B15795A4500526BE1 /* TokenTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
