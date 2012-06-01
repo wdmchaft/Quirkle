@@ -1,0 +1,12 @@
+Stories
+
+TODO
+- token has color
+- token has form
+
+IDEAS
+- rules for token to be set
+- visualize token
+- let user set token
+- switch to next user
+- determine end of game
