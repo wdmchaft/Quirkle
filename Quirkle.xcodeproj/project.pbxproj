@@ -35,17 +35,17 @@
 		2601335C157956EB00526BDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2601335E157956EB00526BDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26013360157956EB00526BDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		26013364157956EB00526BDF /* Quirkle-Info.plist */ = {isa = PBXFileReference; path = "Quirkle-Info.plist"; sourceTree = "<group>"; };
+		26013364157956EB00526BDF /* Quirkle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quirkle-Info.plist"; sourceTree = "<group>"; };
 		26013366157956EB00526BDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		26013368157956EB00526BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2601336A157956EB00526BDF /* Quirkle-Prefix.pch */ = {isa = PBXFileReference; path = "Quirkle-Prefix.pch"; sourceTree = "<group>"; };
-		2601336B157956EB00526BDF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2601336A157956EB00526BDF /* Quirkle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quirkle-Prefix.pch"; sourceTree = "<group>"; };
+		2601336B157956EB00526BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2601336C157956EB00526BDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		26013373157956EC00526BDF /* QuirkleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuirkleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26013374157956EC00526BDF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		2601337C157956EC00526BDF /* QuirkleTests-Info.plist */ = {isa = PBXFileReference; path = "QuirkleTests-Info.plist"; sourceTree = "<group>"; };
+		2601337C157956EC00526BDF /* QuirkleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuirkleTests-Info.plist"; sourceTree = "<group>"; };
 		2601337E157956EC00526BDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		26013380157956EC00526BDF /* QuirkleTests.h */ = {isa = PBXFileReference; path = QuirkleTests.h; sourceTree = "<group>"; };
+		26013380157956EC00526BDF /* QuirkleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuirkleTests.h; sourceTree = "<group>"; };
 		26013381157956EC00526BDF /* QuirkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuirkleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
