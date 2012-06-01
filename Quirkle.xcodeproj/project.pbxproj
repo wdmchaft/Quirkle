@@ -17,8 +17,9 @@
 		26013376157956EC00526BDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601335C157956EB00526BDF /* UIKit.framework */; };
 		26013377157956EC00526BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601335E157956EB00526BDF /* Foundation.framework */; };
 		2601337F157956EC00526BDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2601337D157956EC00526BDF /* InfoPlist.strings */; };
-		26013382157956EC00526BDF /* QuirkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26013381157956EC00526BDF /* QuirkleTests.m */; };
 		26013390157957E900526BDF /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2601338F157957E900526BDF /* TODO.txt */; };
+		2601339815795A2C00526BDF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2601339715795A2C00526BDF /* MainStoryboard.storyboard */; };
+		2601339B15795A4500526BDF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339A15795A4500526BDF /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +47,10 @@
 		26013374157956EC00526BDF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2601337C157956EC00526BDF /* QuirkleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuirkleTests-Info.plist"; sourceTree = "<group>"; };
 		2601337E157956EC00526BDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		26013380157956EC00526BDF /* QuirkleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuirkleTests.h; sourceTree = "<group>"; };
-		26013381157956EC00526BDF /* QuirkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuirkleTests.m; sourceTree = "<group>"; };
 		2601338F157957E900526BDF /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		2601339715795A2C00526BDF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		2601339915795A4500526BDF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2601339A15795A4500526BDF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,9 @@
 				2601336B157956EB00526BDF /* AppDelegate.h */,
 				2601336C157956EB00526BDF /* AppDelegate.m */,
 				26013363157956EB00526BDF /* Supporting Files */,
+				2601339715795A2C00526BDF /* MainStoryboard.storyboard */,
+				2601339915795A4500526BDF /* MainViewController.h */,
+				2601339A15795A4500526BDF /* MainViewController.m */,
 			);
 			path = Quirkle;
 			sourceTree = "<group>";
@@ -130,8 +135,6 @@
 		2601337A157956EC00526BDF /* QuirkleTests */ = {
 			isa = PBXGroup;
 			children = (
-				26013380157956EC00526BDF /* QuirkleTests.h */,
-				26013381157956EC00526BDF /* QuirkleTests.m */,
 				2601337B157956EC00526BDF /* Supporting Files */,
 			);
 			path = QuirkleTests;
@@ -218,6 +221,7 @@
 			files = (
 				26013367157956EB00526BDF /* InfoPlist.strings in Resources */,
 				26013390157957E900526BDF /* TODO.txt in Resources */,
+				2601339815795A2C00526BDF /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +258,7 @@
 			files = (
 				26013369157956EB00526BDF /* main.m in Sources */,
 				2601336D157956EB00526BDF /* AppDelegate.m in Sources */,
+				2601339B15795A4500526BDF /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26013382157956EC00526BDF /* QuirkleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
