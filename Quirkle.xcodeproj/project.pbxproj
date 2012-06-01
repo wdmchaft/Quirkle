@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2601335D157956EB00526BDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601335C157956EB00526BDF /* UIKit.framework */; };
+		2601335F157956EB00526BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601335E157956EB00526BDF /* Foundation.framework */; };
+		26013361157956EB00526BDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26013360157956EB00526BDF /* CoreGraphics.framework */; };
+		26013367157956EB00526BDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26013365157956EB00526BDF /* InfoPlist.strings */; };
+		26013369157956EB00526BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26013368157956EB00526BDF /* main.m */; };
+		2601336D157956EB00526BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601336C157956EB00526BDF /* AppDelegate.m */; };
+		26013375157956EC00526BDF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26013374157956EC00526BDF /* SenTestingKit.framework */; };
+		26013376157956EC00526BDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601335C157956EB00526BDF /* UIKit.framework */; };
+		26013377157956EC00526BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601335E157956EB00526BDF /* Foundation.framework */; };
+		2601337F157956EC00526BDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2601337D157956EC00526BDF /* InfoPlist.strings */; };
+		26013382157956EC00526BDF /* QuirkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26013381157956EC00526BDF /* QuirkleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26013378157956EC00526BDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2601334F157956EB00526BDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26013357157956EB00526BDF;
+			remoteInfo = Quirkle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26013358157956EB00526BDF /* Quirkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quirkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2601335C157956EB00526BDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2601335E157956EB00526BDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		26013360157956EB00526BDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		26013364157956EB00526BDF /* Quirkle-Info.plist */ = {isa = PBXFileReference; path = "Quirkle-Info.plist"; sourceTree = "<group>"; };
+		26013366157956EB00526BDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		26013368157956EB00526BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2601336A157956EB00526BDF /* Quirkle-Prefix.pch */ = {isa = PBXFileReference; path = "Quirkle-Prefix.pch"; sourceTree = "<group>"; };
+		2601336B157956EB00526BDF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2601336C157956EB00526BDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26013373157956EC00526BDF /* QuirkleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuirkleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26013374157956EC00526BDF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2601337C157956EC00526BDF /* QuirkleTests-Info.plist */ = {isa = PBXFileReference; path = "QuirkleTests-Info.plist"; sourceTree = "<group>"; };
+		2601337E157956EC00526BDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		26013380157956EC00526BDF /* QuirkleTests.h */ = {isa = PBXFileReference; path = QuirkleTests.h; sourceTree = "<group>"; };
+		26013381157956EC00526BDF /* QuirkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuirkleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26013355157956EB00526BDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2601335D157956EB00526BDF /* UIKit.framework in Frameworks */,
+				2601335F157956EB00526BDF /* Foundation.framework in Frameworks */,
+				26013361157956EB00526BDF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2601336F157956EC00526BDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26013375157956EC00526BDF /* SenTestingKit.framework in Frameworks */,
+				26013376157956EC00526BDF /* UIKit.framework in Frameworks */,
+				26013377157956EC00526BDF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2601334D157956EB00526BDF = {
+			isa = PBXGroup;
+			children = (
+				26013362157956EB00526BDF /* Quirkle */,
+				2601337A157956EC00526BDF /* QuirkleTests */,
+				2601335B157956EB00526BDF /* Frameworks */,
+				26013359157956EB00526BDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26013359157956EB00526BDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26013358157956EB00526BDF /* Quirkle.app */,
+				26013373157956EC00526BDF /* QuirkleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2601335B157956EB00526BDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2601335C157956EB00526BDF /* UIKit.framework */,
+				2601335E157956EB00526BDF /* Foundation.framework */,
+				26013360157956EB00526BDF /* CoreGraphics.framework */,
+				26013374157956EC00526BDF /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26013362157956EB00526BDF /* Quirkle */ = {
+			isa = PBXGroup;
+			children = (
+				2601336B157956EB00526BDF /* AppDelegate.h */,
+				2601336C157956EB00526BDF /* AppDelegate.m */,
+				26013363157956EB00526BDF /* Supporting Files */,
+			);
+			path = Quirkle;
+			sourceTree = "<group>";
+		};
+		26013363157956EB00526BDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26013364157956EB00526BDF /* Quirkle-Info.plist */,
+				26013365157956EB00526BDF /* InfoPlist.strings */,
+				26013368157956EB00526BDF /* main.m */,
+				2601336A157956EB00526BDF /* Quirkle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2601337A157956EC00526BDF /* QuirkleTests */ = {
+			isa = PBXGroup;
+			children = (
+				26013380157956EC00526BDF /* QuirkleTests.h */,
+				26013381157956EC00526BDF /* QuirkleTests.m */,
+				2601337B157956EC00526BDF /* Supporting Files */,
+			);
+			path = QuirkleTests;
+			sourceTree = "<group>";
+		};
+		2601337B157956EC00526BDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2601337C157956EC00526BDF /* QuirkleTests-Info.plist */,
+				2601337D157956EC00526BDF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26013357157956EB00526BDF /* Quirkle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26013385157956EC00526BDF /* Build configuration list for PBXNativeTarget "Quirkle" */;
+			buildPhases = (
+				26013354157956EB00526BDF /* Sources */,
+				26013355157956EB00526BDF /* Frameworks */,
+				26013356157956EB00526BDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quirkle;
+			productName = Quirkle;
+			productReference = 26013358157956EB00526BDF /* Quirkle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26013372157956EC00526BDF /* QuirkleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26013388157956EC00526BDF /* Build configuration list for PBXNativeTarget "QuirkleTests" */;
+			buildPhases = (
+				2601336E157956EC00526BDF /* Sources */,
+				2601336F157956EC00526BDF /* Frameworks */,
+				26013370157956EC00526BDF /* Resources */,
+				26013371157956EC00526BDF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26013379157956EC00526BDF /* PBXTargetDependency */,
+			);
+			name = QuirkleTests;
+			productName = QuirkleTests;
+			productReference = 26013373157956EC00526BDF /* QuirkleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2601334F157956EB00526BDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 26013352157956EB00526BDF /* Build configuration list for PBXProject "Quirkle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2601334D157956EB00526BDF;
+			productRefGroup = 26013359157956EB00526BDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26013357157956EB00526BDF /* Quirkle */,
+				26013372157956EC00526BDF /* QuirkleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26013356157956EB00526BDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26013367157956EB00526BDF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26013370157956EC00526BDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2601337F157956EC00526BDF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26013371157956EC00526BDF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26013354157956EB00526BDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26013369157956EB00526BDF /* main.m in Sources */,
+				2601336D157956EB00526BDF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2601336E157956EC00526BDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26013382157956EC00526BDF /* QuirkleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26013379157956EC00526BDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26013357157956EB00526BDF /* Quirkle */;
+			targetProxy = 26013378157956EC00526BDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26013365157956EB00526BDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26013366157956EB00526BDF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2601337D157956EC00526BDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2601337E157956EC00526BDF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26013383157956EC00526BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		26013384157956EC00526BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26013386157956EC00526BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quirkle/Quirkle-Prefix.pch";
+				INFOPLIST_FILE = "Quirkle/Quirkle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		26013387157956EC00526BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quirkle/Quirkle-Prefix.pch";
+				INFOPLIST_FILE = "Quirkle/Quirkle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		26013389157956EC00526BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quirkle.app/Quirkle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quirkle/Quirkle-Prefix.pch";
+				INFOPLIST_FILE = "QuirkleTests/QuirkleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2601338A157956EC00526BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quirkle.app/Quirkle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quirkle/Quirkle-Prefix.pch";
+				INFOPLIST_FILE = "QuirkleTests/QuirkleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26013352157956EB00526BDF /* Build configuration list for PBXProject "Quirkle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26013383157956EC00526BDF /* Debug */,
+				26013384157956EC00526BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26013385157956EC00526BDF /* Build configuration list for PBXNativeTarget "Quirkle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26013386157956EC00526BDF /* Debug */,
+				26013387157956EC00526BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26013388157956EC00526BDF /* Build configuration list for PBXNativeTarget "QuirkleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26013389157956EC00526BDF /* Debug */,
+				2601338A157956EC00526BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2601334F157956EB00526BDF /* Project object */;
+}
