@@ -21,6 +21,8 @@
 		2601339815795A2C00526BDF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2601339715795A2C00526BDF /* MainStoryboard.storyboard */; };
 		2601339B15795A4500526BDF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339A15795A4500526BDF /* MainViewController.m */; };
 		2601339B15795A4500526BE1 /* TokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE0 /* TokenTest.m */; };
+		2601339B15795A4500526BE4 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE3 /* Token.m */; };
+		260133BC157A37AA00526BDF /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,34 @@
 		2601339915795A4500526BDF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		2601339A15795A4500526BDF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2601339B15795A4500526BE0 /* TokenTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenTest.m; sourceTree = "<group>"; };
+		2601339B15795A4500526BE3 /* Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Token.m; sourceTree = "<group>"; };
+		2601339B15795A4500526BE5 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Token.h; sourceTree = "<group>"; };
+		260133A3157A379200526BDF /* EXPDoubleTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDoubleTuple.h; sourceTree = "<group>"; };
+		260133A4157A379200526BDF /* Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expecta.h; sourceTree = "<group>"; };
+		260133A5157A379200526BDF /* ExpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpectaSupport.h; sourceTree = "<group>"; };
+		260133A6157A379200526BDF /* EXPExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpect.h; sourceTree = "<group>"; };
+		260133A7157A379200526BDF /* EXPFloatTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFloatTuple.h; sourceTree = "<group>"; };
+		260133A8157A379200526BDF /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcherHelpers.h; sourceTree = "<group>"; };
+		260133A9157A379200526BDF /* EXPMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatchers.h; sourceTree = "<group>"; };
+		260133AA157A379200526BDF /* EXPMatchers+toBeFalsy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeFalsy.h"; sourceTree = "<group>"; };
+		260133AB157A379200526BDF /* EXPMatchers+toBeGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeGreaterThan.h"; sourceTree = "<group>"; };
+		260133AC157A379200526BDF /* EXPMatchers+toBeGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeGreaterThanOrEqualTo.h"; sourceTree = "<group>"; };
+		260133AD157A379200526BDF /* EXPMatchers+toBeIdenticalTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeIdenticalTo.h"; sourceTree = "<group>"; };
+		260133AE157A379200526BDF /* EXPMatchers+toBeInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeInstanceOf.h"; sourceTree = "<group>"; };
+		260133AF157A379200526BDF /* EXPMatchers+toBeInTheRangeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeInTheRangeOf.h"; sourceTree = "<group>"; };
+		260133B0157A379200526BDF /* EXPMatchers+toBeKindOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeKindOf.h"; sourceTree = "<group>"; };
+		260133B1157A379200526BDF /* EXPMatchers+toBeLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeLessThan.h"; sourceTree = "<group>"; };
+		260133B2157A379200526BDF /* EXPMatchers+toBeLessThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeLessThanOrEqualTo.h"; sourceTree = "<group>"; };
+		260133B3157A379200526BDF /* EXPMatchers+toBeNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeNil.h"; sourceTree = "<group>"; };
+		260133B4157A379200526BDF /* EXPMatchers+toBeSubclassOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeSubclassOf.h"; sourceTree = "<group>"; };
+		260133B5157A379200526BDF /* EXPMatchers+toBeTruthy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toBeTruthy.h"; sourceTree = "<group>"; };
+		260133B6157A379200526BDF /* EXPMatchers+toContain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toContain.h"; sourceTree = "<group>"; };
+		260133B7157A379200526BDF /* EXPMatchers+toEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+toEqual.h"; sourceTree = "<group>"; };
+		260133B8157A379200526BDF /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPUnsupportedObject.h; sourceTree = "<group>"; };
+		260133B9157A379200526BDF /* NSObject+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Expecta.h"; sourceTree = "<group>"; };
+		260133BA157A379200526BDF /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
+		260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-ios-universal.a"; sourceTree = "<group>"; };
+		260133BD157A37E800526BDF /* TestPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +103,7 @@
 				26013375157956EC00526BDF /* SenTestingKit.framework in Frameworks */,
 				26013376157956EC00526BDF /* UIKit.framework in Frameworks */,
 				26013377157956EC00526BDF /* Foundation.framework in Frameworks */,
+				260133BC157A37AA00526BDF /* libExpecta-ios-universal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +113,7 @@
 		2601334D157956EB00526BDF = {
 			isa = PBXGroup;
 			children = (
+				260133A0157A373B00526BDF /* 3rdParty */,
 				2601338F157957E900526BDF /* TODO.txt */,
 				26013362157956EB00526BDF /* Quirkle */,
 				2601337A157956EC00526BDF /* QuirkleTests */,
@@ -113,6 +145,8 @@
 		26013362157956EB00526BDF /* Quirkle */ = {
 			isa = PBXGroup;
 			children = (
+				2601339B15795A4500526BE5 /* Token.h */,
+				2601339B15795A4500526BE3 /* Token.m */,
 				2601336B157956EB00526BDF /* AppDelegate.h */,
 				2601336C157956EB00526BDF /* AppDelegate.m */,
 				26013363157956EB00526BDF /* Supporting Files */,
@@ -148,8 +182,49 @@
 			children = (
 				2601337C157956EC00526BDF /* QuirkleTests-Info.plist */,
 				2601337D157956EC00526BDF /* InfoPlist.strings */,
+				260133BD157A37E800526BDF /* TestPrefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		260133A0157A373B00526BDF /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				260133A2157A377800526BDF /* expecta */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		260133A2157A377800526BDF /* expecta */ = {
+			isa = PBXGroup;
+			children = (
+				260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */,
+				260133A3157A379200526BDF /* EXPDoubleTuple.h */,
+				260133A4157A379200526BDF /* Expecta.h */,
+				260133A5157A379200526BDF /* ExpectaSupport.h */,
+				260133A6157A379200526BDF /* EXPExpect.h */,
+				260133A7157A379200526BDF /* EXPFloatTuple.h */,
+				260133A8157A379200526BDF /* EXPMatcherHelpers.h */,
+				260133A9157A379200526BDF /* EXPMatchers.h */,
+				260133AA157A379200526BDF /* EXPMatchers+toBeFalsy.h */,
+				260133AB157A379200526BDF /* EXPMatchers+toBeGreaterThan.h */,
+				260133AC157A379200526BDF /* EXPMatchers+toBeGreaterThanOrEqualTo.h */,
+				260133AD157A379200526BDF /* EXPMatchers+toBeIdenticalTo.h */,
+				260133AE157A379200526BDF /* EXPMatchers+toBeInstanceOf.h */,
+				260133AF157A379200526BDF /* EXPMatchers+toBeInTheRangeOf.h */,
+				260133B0157A379200526BDF /* EXPMatchers+toBeKindOf.h */,
+				260133B1157A379200526BDF /* EXPMatchers+toBeLessThan.h */,
+				260133B2157A379200526BDF /* EXPMatchers+toBeLessThanOrEqualTo.h */,
+				260133B3157A379200526BDF /* EXPMatchers+toBeNil.h */,
+				260133B4157A379200526BDF /* EXPMatchers+toBeSubclassOf.h */,
+				260133B5157A379200526BDF /* EXPMatchers+toBeTruthy.h */,
+				260133B6157A379200526BDF /* EXPMatchers+toContain.h */,
+				260133B7157A379200526BDF /* EXPMatchers+toEqual.h */,
+				260133B8157A379200526BDF /* EXPUnsupportedObject.h */,
+				260133B9157A379200526BDF /* NSObject+Expecta.h */,
+				260133BA157A379200526BDF /* NSValue+Expecta.h */,
+			);
+			path = expecta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +337,7 @@
 				26013369157956EB00526BDF /* main.m in Sources */,
 				2601336D157956EB00526BDF /* AppDelegate.m in Sources */,
 				2601339B15795A4500526BDF /* MainViewController.m in Sources */,
+				2601339B15795A4500526BE4 /* Token.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,8 +457,13 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Quirkle/Quirkle-Prefix.pch";
+				GCC_PREFIX_HEADER = QuirkleTests/TestPrefix.pch;
 				INFOPLIST_FILE = "QuirkleTests/QuirkleTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/3rdParty/expecta\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -398,8 +479,13 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Quirkle/Quirkle-Prefix.pch";
+				GCC_PREFIX_HEADER = QuirkleTests/TestPrefix.pch;
 				INFOPLIST_FILE = "QuirkleTests/QuirkleTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/3rdParty/expecta\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

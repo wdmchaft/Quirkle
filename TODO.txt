@@ -1,11 +1,15 @@
 Stories
 
-TODO
+DONE
 - token has color
 - token has form
 
+TODO
+- token with same color is valid
+- token with same shape is valid
+- token with different color or shape is invalid
+
 IDEAS
-- rules for token to be set
 - visualize token
 - let user set token
 - switch to next user
