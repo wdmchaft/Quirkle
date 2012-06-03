@@ -15,32 +15,37 @@
 	if (self) {
 		_color = color;
 		_shape = shape;
-		_neighbours = [[NSMutableArray alloc] init];
+		_neighbours = [[NSMutableArray alloc] initWithObjects:[NSNull null], [NSNull null], [NSNull null], [NSNull null], nil];
 	}
 	return self;
 }
 
-- (void)addNeighbour:(Token *)token {
-	if ([self isNotNeighbour:token] && ([self isSameColor:token] || [self isSameShape:token])) {
-		[_neighbours addObject:token];
-		[token addNeighbour:self];
+- (void)putNeighbour:(Token *)token toSide:(TokenSide)side {
+	if ([self isEmpty:side]) {
+		[_neighbours replaceObjectAtIndex:side withObject:token];
 	}
 }
 
-- (BOOL)isNotNeighbour:(Token *)token {
-	return ![_neighbours containsObject:token];
+- (BOOL)isEmpty:(TokenSide)side {
+	return [_neighbours objectAtIndex:side] == [NSNull null];
 }
 
-- (BOOL)isSameColor:(Token *)token {
-	return token.color == self.color;
-}
+//- (BOOL)isSameColor:(Token *)token {
+//	return token.color == self.color;
+//}
+//
+//- (BOOL)isSameShape:(Token *)token {
+//	return self.shape == token.shape;
+//}
+//
+//- (BOOL)isNeighbourOf:(Token *)otherToken {
+//	return [_neighbours containsObject:otherToken];
+//}
 
-- (BOOL)isSameShape:(Token *)token {
-	return self.shape == token.shape;
+- (Token *)neighbourAtSide:(TokenSide)side {
+	if ([self isEmpty:side]) {
+		return nil;
+	}
+	return [_neighbours objectAtIndex:side];
 }
-
-- (BOOL)isNeighbourOf:(Token *)otherToken {
-	return [_neighbours containsObject:otherToken];
-}
-
 @end

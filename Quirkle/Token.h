@@ -18,6 +18,13 @@ typedef enum {
 	TokenShapeCrystal
 } TokenShape;
 
+typedef enum {
+	TokenSideTop,
+	TokenSideRight,
+	TokenSideBottom,
+	TokenSideLeft
+} TokenSide;
+
 @interface Token : NSObject
 
 @property (nonatomic, assign) TokenColor color;
@@ -25,6 +32,7 @@ typedef enum {
 
 - (Token *)initWithColor:(TokenColor)color shape:(TokenShape)shape;
 
-- (void)addNeighbour:(Token *)token;
-- (BOOL)isNeighbourOf:(Token *)otherToken;
+- (void)putNeighbour:(Token *)token toSide:(TokenSide)side;
+//- (BOOL)isNeighbourOf:(Token *)otherToken;
+- (Token *)neighbourAtSide:(TokenSide)side;
 @end
