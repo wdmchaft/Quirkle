@@ -8,15 +8,14 @@
 }
 
 - (void)setUp {
-	token = [[Token alloc] init];
+	token = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
 }
 
 - (void)testHasColor {
-	[token setColor:TokenColorYellow];
-	expect(token.color).toEqual(TokenColorYellow);
+	expect([[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle].color).toEqual(TokenColorBlue);
 }
 
-- (void)testHasSixDifferentColors {
+- (void)testCanHaveSixDifferentColors {
 	[token setColor:TokenColorYellow];
 	expect(token.color).toEqual(TokenColorYellow);
 	[token setColor:TokenColorBlue];
@@ -32,8 +31,7 @@
 }
 
 - (void)testHasShape {
-	[token setShape:TokenShapeCircle];
-	expect(token.shape).toEqual(TokenShapeCircle);
+	expect([[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare].shape).toEqual(TokenShapeSquare);
 }
 
 - (void)testHasSixDifferentShapes {
@@ -49,6 +47,28 @@
 	expect(token.shape).toEqual(TokenShapeStar);
 	[token setShape:TokenShapeCrystal];
 	expect(token.shape).toEqual(TokenShapeCrystal);
+}
+
+- (void)testTokenCanHaveNeighbour {
+	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	[token addNeighbour:otherToken];
+	expect([token isNeighbour:otherToken]).toBeTruthy();
+}
+
+- (void)testNeighbourhoodIsAssociative {
+	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	[token addNeighbour:otherToken];
+	expect([otherToken isNeighbour:token]).toBeTruthy();
+}
+
+- (void)testCanHaveOnlyFourNeighbours {
+	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
+	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
+	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
+	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
+	Token *fifthToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	[token addNeighbour:fifthToken];
+	expect([token isNeighbour:fifthToken]).toBeFalsy();
 }
 
 @end

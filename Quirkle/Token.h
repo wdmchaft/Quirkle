@@ -19,6 +19,13 @@ typedef enum {
 } TokenShape;
 
 @interface Token : NSObject
+
 @property (nonatomic, assign) TokenColor color;
 @property (nonatomic, assign) TokenShape shape;
+
+- (Token *)initWithColor:(TokenColor)color shape:(TokenShape)shape;
+
+- (void)addNeighbour:(Token *)neighbour;
+- (BOOL)isNeighbour:(Token *)otherToken;
+
 @end
