@@ -25,7 +25,6 @@ typedef enum {
 
 - (Token *)initWithColor:(TokenColor)color shape:(TokenShape)shape;
 
-- (void)addNeighbour:(Token *)neighbour;
-- (BOOL)isNeighbour:(Token *)otherToken;
-
+- (void)addNeighbour:(Token *)token;
+- (BOOL)isNeighbourOf:(Token *)otherToken;
 @end

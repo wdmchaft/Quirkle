@@ -49,26 +49,33 @@
 	expect(token.shape).toEqual(TokenShapeCrystal);
 }
 
-- (void)testTokenCanHaveNeighbour {
+- (void)testCanHaveNeighbour {
 	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
 	[token addNeighbour:otherToken];
-	expect([token isNeighbour:otherToken]).toBeTruthy();
+	expect([token isNeighbourOf:otherToken]).toBeTruthy();
+	expect([otherToken isNeighbourOf:token]).toBeTruthy();
+	Token *noNeighbour = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
+	expect([token isNeighbourOf:noNeighbour]).toBeFalsy();
 }
 
-- (void)testNeighbourhoodIsAssociative {
-	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-	[token addNeighbour:otherToken];
-	expect([otherToken isNeighbour:token]).toBeTruthy();
+- (void)testOnlyAddsSameColoredTokensAsNeighbour {
+	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
+	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
+	[yellowCircleToken addNeighbour:yellowSquareToken];
+	[yellowCircleToken addNeighbour:blueSquareToken];
+	expect([yellowCircleToken isNeighbourOf:yellowSquareToken]).toBeTruthy();
+	expect([yellowCircleToken isNeighbourOf:blueSquareToken]).toBeFalsy();
 }
 
-- (void)testCanHaveOnlyFourNeighbours {
-	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
-	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
-	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
-	[token addNeighbour:[[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]];
-	Token *fifthToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-	[token addNeighbour:fifthToken];
-	expect([token isNeighbour:fifthToken]).toBeFalsy();
+- (void)testOnlyAddsSameShapedTokenAsNeighbour {
+	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	Token *blueCircleToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
+	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
+	[yellowCircleToken addNeighbour:blueCircleToken];
+	[yellowCircleToken addNeighbour:blueSquareToken];
+	expect([yellowCircleToken isNeighbourOf:blueCircleToken]).toBeTruthy();
+	expect([yellowCircleToken isNeighbourOf:blueSquareToken]).toBeFalsy();
 }
 
 @end

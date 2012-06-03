@@ -13,21 +13,34 @@
 - (Token *)initWithColor:(TokenColor)color shape:(TokenShape)shape {
 	self = [super init];
 	if (self) {
-		_neighbours = [[NSMutableArray alloc] init];
 		_color = color;
 		_shape = shape;
+		_neighbours = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
 
-- (void)addNeighbour:(Token *)neighbour {
-	if (![_neighbours containsObject:neighbour] && _neighbours.count < 4) {
-		[_neighbours addObject:neighbour];
-		[neighbour addNeighbour:self];
+- (void)addNeighbour:(Token *)token {
+	if ([self isNotNeighbour:token] && ([self isSameColor:token] || [self isSameShape:token])) {
+		[_neighbours addObject:token];
+		[token addNeighbour:self];
 	}
 }
 
-- (BOOL)isNeighbour:(Token *)otherToken {
+- (BOOL)isNotNeighbour:(Token *)token {
+	return ![_neighbours containsObject:token];
+}
+
+- (BOOL)isSameColor:(Token *)token {
+	return token.color == self.color;
+}
+
+- (BOOL)isSameShape:(Token *)token {
+	return self.shape == token.shape;
+}
+
+- (BOOL)isNeighbourOf:(Token *)otherToken {
 	return [_neighbours containsObject:otherToken];
 }
+
 @end

@@ -23,8 +23,7 @@
 		2601339B15795A4500526BE1 /* TokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE0 /* TokenTest.m */; };
 		2601339B15795A4500526BE4 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE3 /* Token.m */; };
 		260133BC157A37AA00526BDF /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */; };
-		260133BD157A37E800526BE3 /* RowTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BE0 /* RowTest.m */; };
-		260133BD157A37E800526BE5 /* Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BE4 /* Row.m */; };
+		260133BD157A37E800526BE5 /* Row.m in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,9 +84,6 @@
 		260133BA157A379200526BDF /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
 		260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-ios-universal.a"; sourceTree = "<group>"; };
 		260133BD157A37E800526BDF /* TestPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrefix.pch; sourceTree = "<group>"; };
-		260133BD157A37E800526BE0 /* RowTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowTest.m; sourceTree = "<group>"; };
-		260133BD157A37E800526BE4 /* Row.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Row.m; sourceTree = "<group>"; };
-		260133BD157A37E800526BE6 /* Row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Row.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +146,6 @@
 		26013362157956EB00526BDF /* Quirkle */ = {
 			isa = PBXGroup;
 			children = (
-				260133BD157A37E800526BE6 /* Row.h */,
-				260133BD157A37E800526BE4 /* Row.m */,
 				2601339B15795A4500526BE5 /* Token.h */,
 				2601339B15795A4500526BE3 /* Token.m */,
 				2601336B157956EB00526BDF /* AppDelegate.h */,
@@ -178,7 +172,6 @@
 		2601337A157956EC00526BDF /* QuirkleTests */ = {
 			isa = PBXGroup;
 			children = (
-				260133BD157A37E800526BE0 /* RowTest.m */,
 				2601339B15795A4500526BE0 /* TokenTest.m */,
 				2601337B157956EC00526BDF /* Supporting Files */,
 			);
@@ -355,7 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2601339B15795A4500526BE1 /* TokenTest.m in Sources */,
-				260133BD157A37E800526BE3 /* RowTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
