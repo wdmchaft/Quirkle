@@ -70,30 +70,55 @@
 	expect([token neighbourAtSide:TokenSideLeft]).toEqual(firstToken);
 }
 
-//- (void)testIsLeftNeighbourOfItsRightNeighbour {
-//	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-//	[token putNeighbour:otherToken toSide:TokenSideLeft];
-//	expect([otherToken neighbourAtSide:TokenSideRight]).toEqual(token);
-//}
+- (void)testIsLeftNeighbourOfItsRightNeighbour {
+	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	[token putNeighbour:otherToken toSide:TokenSideLeft];
+	expect([otherToken neighbourAtSide:TokenSideRight]).toEqual(token);
+}
 
-//- (void)testOnlyAddsSameColoredTokensAsNeighbour {
-//	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-//	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
-//	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
-//	[yellowCircleToken putNeighbour:yellowSquareToken toSide:NULL];
-//	[yellowCircleToken putNeighbour:blueSquareToken toSide:NULL];
-//	expect([yellowCircleToken isNeighbourOf:yellowSquareToken]).toBeTruthy();
-//	expect([yellowCircleToken isNeighbourOf:blueSquareToken]).toBeFalsy();
-//}
-//
-//- (void)testOnlyAddsSameShapedTokenAsNeighbour {
-//	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-//	Token *blueCircleToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
-//	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
-//	[yellowCircleToken putNeighbour:blueCircleToken toSide:NULL];
-//	[yellowCircleToken putNeighbour:blueSquareToken toSide:NULL];
-//	expect([yellowCircleToken isNeighbourOf:blueCircleToken]).toBeTruthy();
-//	expect([yellowCircleToken isNeighbourOf:blueSquareToken]).toBeFalsy();
-//}
+- (void)testIsRightNeighbourOfItsLeftNeighbour {
+	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	[token putNeighbour:otherToken toSide:TokenSideRight];
+	expect([otherToken neighbourAtSide:TokenSideLeft]).toEqual(token);
+}
 
+- (void)testIsTopNeighbourOfItsBottomNeighbour {
+	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	[token putNeighbour:otherToken toSide:TokenSideTop];
+	expect([otherToken neighbourAtSide:TokenSideBottom]).toEqual(token);
+}
+
+- (void)testIsBottomNeighbourOfItsTopNeighbour {
+	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	[token putNeighbour:otherToken toSide:TokenSideBottom];
+	expect([otherToken neighbourAtSide:TokenSideTop]).toEqual(token);
+}
+
+- (void)testOnlyAddsSameColoredTokensAsNeighbour {
+	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
+	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
+	[yellowCircleToken putNeighbour:yellowSquareToken toSide:TokenSideLeft];
+	[yellowCircleToken putNeighbour:blueSquareToken toSide:TokenSideTop];
+	expect([yellowCircleToken neighbourAtSide:TokenSideLeft]).toEqual(yellowSquareToken);
+	expect([yellowCircleToken neighbourAtSide:TokenSideTop]).Not.toEqual(blueSquareToken);
+}
+
+- (void)testOnlyAddsSameShapedTokenAsNeighbour {
+	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+	Token *blueCircleToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
+	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
+	[yellowCircleToken putNeighbour:blueCircleToken toSide:TokenSideLeft];
+	[yellowCircleToken putNeighbour:blueSquareToken toSide:TokenSideTop];
+	expect([yellowCircleToken neighbourAtSide:TokenSideLeft]).toEqual(blueCircleToken);
+	expect([yellowCircleToken neighbourAtSide:TokenSideTop]).Not.toEqual(blueSquareToken);
+}
+
+- (void)testHasToBeSameColorOfOppositeNeighbourIfItsNotEmpty {
+	// TODO
+}
+
+- (void)testHasToBeSameShapeOfOppositeNeighbourIfItsNotEmpty {
+	// TODO
+}
 @end

@@ -21,26 +21,33 @@
 }
 
 - (void)putNeighbour:(Token *)token toSide:(TokenSide)side {
-	if ([self isEmpty:side]) {
+	if ([self isEmpty:side] && ([self isSameColor:token] || [self isSameShape:token])) {
 		[_neighbours replaceObjectAtIndex:side withObject:token];
+		[token putNeighbour:self toSide:[self oppositeSideOf:side]];
 	}
+}
+
+- (TokenSide)oppositeSideOf:(TokenSide)side {
+	switch (side) {
+		case TokenSideLeft: return TokenSideRight;
+		case TokenSideRight: return TokenSideLeft;
+		case TokenSideTop: return TokenSideBottom;
+		case TokenSideBottom: return TokenSideTop;
+	}
+	return TokenSideLeft;
 }
 
 - (BOOL)isEmpty:(TokenSide)side {
 	return [_neighbours objectAtIndex:side] == [NSNull null];
 }
 
-//- (BOOL)isSameColor:(Token *)token {
-//	return token.color == self.color;
-//}
-//
-//- (BOOL)isSameShape:(Token *)token {
-//	return self.shape == token.shape;
-//}
-//
-//- (BOOL)isNeighbourOf:(Token *)otherToken {
-//	return [_neighbours containsObject:otherToken];
-//}
+- (BOOL)isSameColor:(Token *)token {
+	return token.color == self.color;
+}
+
+- (BOOL)isSameShape:(Token *)token {
+	return self.shape == token.shape;
+}
 
 - (Token *)neighbourAtSide:(TokenSide)side {
 	if ([self isEmpty:side]) {
