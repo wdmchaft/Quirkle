@@ -100,7 +100,4 @@
 	[ruleMock verify];
 }
 
-- (void)testHasToBeSameShapeOfOppositeNeighbourIfItsNotEmpty {
-	// TODO
-}
 @end

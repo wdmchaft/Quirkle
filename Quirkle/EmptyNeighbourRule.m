@@ -4,7 +4,7 @@
 @implementation EmptyNeighbourRule {
 }
 
-- (BOOL)appliesToToken:(Token *)token atSide:(TokenSide)side {
+- (BOOL)appliesToToken:(Token *)otherToken atSide:(TokenSide)side {
 	return ([self.token neighbourAtSide:side]) == nil;
 }
 

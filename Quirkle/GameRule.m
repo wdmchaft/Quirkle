@@ -1,5 +1,4 @@
 #import "GameRule.h"
-#import "Token.h"
 
 
 @implementation GameRule {
@@ -16,9 +15,8 @@
 	return self;
 }
 
-- (BOOL)appliesToToken:(Token *)token atSide:(TokenSide)side {
+- (BOOL)appliesToToken:(Token *)otherToken atSide:(TokenSide)side {
 	return NO;
 }
-
 
 @end

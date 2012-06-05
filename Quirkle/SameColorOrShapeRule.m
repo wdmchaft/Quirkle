@@ -3,8 +3,8 @@
 
 @implementation SameColorOrShapeRule
 
-- (BOOL)appliesToToken:(Token *)token atSide:(TokenSide)side {
-	return [self isSameColor:token] || [self isSameShape:token];
+- (BOOL)appliesToToken:(Token *)otherToken atSide:(TokenSide)side {
+	return [self isSameColor:otherToken] || [self isSameShape:otherToken];
 }
 
 - (BOOL)isSameColor:(Token *)token {

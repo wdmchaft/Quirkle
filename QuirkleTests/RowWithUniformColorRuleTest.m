@@ -1,24 +1,35 @@
 #import "Token.h"
 #import "RowWithUniformColorRule.h"
 
+#define YellowCircleToken [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]
+#define YellowSquareToken [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare]
+#define YellowTriangleToken [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeTriangle]
+#define BlueCircleToken [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle]
+#define RedCircleToken [[Token alloc] initWithColor:TokenColorRed shape:TokenShapeCircle]
+
 @interface RowWithUniformColorRuleTest : SenTestCase
 @end
 
 @implementation RowWithUniformColorRuleTest {
 }
 
-- (void)testHasToBeSameColorOfOppositeNeighbourIfItsNotEmpty {
-	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
-	Token *yellowTriangleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeTriangle];
-	Token *blueCircleToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
-
-	[yellowCircleToken putNeighbour:yellowSquareToken toSide:TokenSideLeft];
+- (void)testSameColorRuleAppliesToAllTokenInRow {
+	Token *yellowCircleToken = YellowCircleToken;
+	[yellowCircleToken putNeighbour:YellowSquareToken toSide:TokenSideLeft];
 	RowWithUniformColorRule *rule = [[RowWithUniformColorRule alloc] initWithToken:yellowCircleToken];
-	expect([rule appliesToToken:yellowTriangleToken atSide:TokenSideRight]).toBeTruthy();
-	expect([rule appliesToToken:blueCircleToken atSide:TokenSideRight]).toBeFalsy();
+
+	expect([rule appliesToToken:YellowTriangleToken atSide:TokenSideRight]).toBeTruthy();
+	expect([rule appliesToToken:BlueCircleToken atSide:TokenSideRight]).toBeFalsy();
 }
 
+- (void)testSameShapeRuleAppliesToAllTokenInRow {
+	Token *yellowCircleToken = YellowCircleToken;
+	[yellowCircleToken putNeighbour:RedCircleToken toSide:TokenSideLeft];
+	RowWithUniformColorRule *rule = [[RowWithUniformColorRule alloc] initWithToken:yellowCircleToken];
+
+	expect([rule appliesToToken:BlueCircleToken atSide:TokenSideRight]).toBeTruthy();
+	expect([rule appliesToToken:YellowTriangleToken atSide:TokenSideRight]).toBeFalsy();
+}
 
 
 @end

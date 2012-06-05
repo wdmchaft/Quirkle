@@ -9,6 +9,7 @@
 
 
 - (id)initWithToken:(Token *)token;
-- (BOOL)appliesToToken:(Token *)token atSide:(TokenSide)side;
+- (BOOL)appliesToToken:(Token *)otherToken atSide:(TokenSide)side;
+
 
 @end
