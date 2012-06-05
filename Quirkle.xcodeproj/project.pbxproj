@@ -23,10 +23,14 @@
 		2601339B15795A4500526BE1 /* TokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE0 /* TokenTest.m */; };
 		2601339B15795A4500526BE4 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE3 /* Token.m */; };
 		260133BC157A37AA00526BDF /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */; };
-		260133BD157A37E800526BE5 /* Row.m in Sources */ = {isa = PBXBuildFile; };
+		260133BD157A37E800526BE5 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		260133BD157A37E800526BE7 /* EmptyNeighbourRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BE6 /* EmptyNeighbourRule.m */; };
 		260133BD157A37E800526BEA /* GameRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BE9 /* GameRule.m */; };
 		260133BD157A37E800526BED /* SameColorOrShapeRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BEC /* SameColorOrShapeRule.m */; };
+		260133F4157DF28700526BE1 /* EmptyNeighbourRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE0 /* EmptyNeighbourRuleTest.m */; };
+		260133F4157DF28700526BE4 /* SameColorOrShapeRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE3 /* SameColorOrShapeRuleTest.m */; };
+		260133F4157DF28700526BE7 /* RowWithUniformColorRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */; };
+		260133F4157DF28700526BEA /* RowWithUniformColorRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE9 /* RowWithUniformColorRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,18 @@
 		260133BD157A37E800526BEB /* GameRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRule.h; sourceTree = "<group>"; };
 		260133BD157A37E800526BEC /* SameColorOrShapeRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameColorOrShapeRule.m; sourceTree = "<group>"; };
 		260133BD157A37E800526BEE /* SameColorOrShapeRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameColorOrShapeRule.h; sourceTree = "<group>"; };
+		260133E5157DEE0200526BDF /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		260133E6157DEE0200526BDF /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		260133E7157DEE0200526BDF /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		260133E8157DEE0200526BDF /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		260133E9157DEE0200526BDF /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		260133EA157DEE0200526BDF /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		260133EB157DEE0200526BDF /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		260133F4157DF28700526BE0 /* EmptyNeighbourRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyNeighbourRuleTest.m; sourceTree = "<group>"; };
+		260133F4157DF28700526BE3 /* SameColorOrShapeRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameColorOrShapeRuleTest.m; sourceTree = "<group>"; };
+		260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowWithUniformColorRuleTest.m; sourceTree = "<group>"; };
+		260133F4157DF28700526BE9 /* RowWithUniformColorRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowWithUniformColorRule.m; sourceTree = "<group>"; };
+		260133F4157DF28700526BEB /* RowWithUniformColorRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowWithUniformColorRule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +142,7 @@
 				260133A0157A373B00526BDF /* 3rdParty */,
 				2601338F157957E900526BDF /* TODO.txt */,
 				26013362157956EB00526BDF /* Quirkle */,
+				26013363157956EB00526BDF /* Supporting Files */,
 				2601337A157956EC00526BDF /* QuirkleTests */,
 				2601335B157956EB00526BDF /* Frameworks */,
 				26013359157956EB00526BDF /* Products */,
@@ -155,20 +172,14 @@
 		26013362157956EB00526BDF /* Quirkle */ = {
 			isa = PBXGroup;
 			children = (
-				260133BD157A37E800526BEE /* SameColorOrShapeRule.h */,
-				260133BD157A37E800526BEC /* SameColorOrShapeRule.m */,
-				260133BD157A37E800526BEB /* GameRule.h */,
-				260133BD157A37E800526BE9 /* GameRule.m */,
-				260133BD157A37E800526BE8 /* EmptyNeighbourRule.h */,
-				260133BD157A37E800526BE6 /* EmptyNeighbourRule.m */,
-				2601339B15795A4500526BE5 /* Token.h */,
-				2601339B15795A4500526BE3 /* Token.m */,
+				260133F4157DF28700526BDF /* GameRules */,
 				2601336B157956EB00526BDF /* AppDelegate.h */,
 				2601336C157956EB00526BDF /* AppDelegate.m */,
-				26013363157956EB00526BDF /* Supporting Files */,
 				2601339715795A2C00526BDF /* MainStoryboard.storyboard */,
 				2601339915795A4500526BDF /* MainViewController.h */,
 				2601339A15795A4500526BDF /* MainViewController.m */,
+				2601339B15795A4500526BE5 /* Token.h */,
+				2601339B15795A4500526BE3 /* Token.m */,
 			);
 			path = Quirkle;
 			sourceTree = "<group>";
@@ -182,11 +193,15 @@
 				2601336A157956EB00526BDF /* Quirkle-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = Quirkle;
 			sourceTree = "<group>";
 		};
 		2601337A157956EC00526BDF /* QuirkleTests */ = {
 			isa = PBXGroup;
 			children = (
+				260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */,
+				260133F4157DF28700526BE3 /* SameColorOrShapeRuleTest.m */,
+				260133F4157DF28700526BE0 /* EmptyNeighbourRuleTest.m */,
 				2601339B15795A4500526BE0 /* TokenTest.m */,
 				2601337B157956EC00526BDF /* Supporting Files */,
 			);
@@ -206,6 +221,7 @@
 		260133A0157A373B00526BDF /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
+				260133EE157DEE0E00526BDF /* OCMock */,
 				260133A2157A377800526BDF /* expecta */,
 			);
 			path = 3rdParty;
@@ -241,6 +257,51 @@
 				260133BA157A379200526BDF /* NSValue+Expecta.h */,
 			);
 			path = expecta;
+			sourceTree = "<group>";
+		};
+		260133E3157DEE0200526BDF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				260133E4157DEE0200526BDF /* OCMock */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		260133E4157DEE0200526BDF /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				260133E5157DEE0200526BDF /* NSNotificationCenter+OCMAdditions.h */,
+				260133E6157DEE0200526BDF /* OCMArg.h */,
+				260133E7157DEE0200526BDF /* OCMConstraint.h */,
+				260133E8157DEE0200526BDF /* OCMock.h */,
+				260133E9157DEE0200526BDF /* OCMockObject.h */,
+				260133EA157DEE0200526BDF /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		260133EE157DEE0E00526BDF /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				260133E3157DEE0200526BDF /* Headers */,
+				260133EB157DEE0200526BDF /* libOCMock.a */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		260133F4157DF28700526BDF /* GameRules */ = {
+			isa = PBXGroup;
+			children = (
+				260133F4157DF28700526BEB /* RowWithUniformColorRule.h */,
+				260133F4157DF28700526BE9 /* RowWithUniformColorRule.m */,
+				260133BD157A37E800526BEB /* GameRule.h */,
+				260133BD157A37E800526BE9 /* GameRule.m */,
+				260133BD157A37E800526BE8 /* EmptyNeighbourRule.h */,
+				260133BD157A37E800526BE6 /* EmptyNeighbourRule.m */,
+				260133BD157A37E800526BEE /* SameColorOrShapeRule.h */,
+				260133BD157A37E800526BEC /* SameColorOrShapeRule.m */,
+			);
+			name = GameRules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,10 +415,11 @@
 				2601336D157956EB00526BDF /* AppDelegate.m in Sources */,
 				2601339B15795A4500526BDF /* MainViewController.m in Sources */,
 				2601339B15795A4500526BE4 /* Token.m in Sources */,
-				260133BD157A37E800526BE5 /* Row.m in Sources */,
+				260133BD157A37E800526BE5 /* (null) in Sources */,
 				260133BD157A37E800526BE7 /* EmptyNeighbourRule.m in Sources */,
 				260133BD157A37E800526BEA /* GameRule.m in Sources */,
 				260133BD157A37E800526BED /* SameColorOrShapeRule.m in Sources */,
+				260133F4157DF28700526BEA /* RowWithUniformColorRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +428,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2601339B15795A4500526BE1 /* TokenTest.m in Sources */,
+				260133F4157DF28700526BE1 /* EmptyNeighbourRuleTest.m in Sources */,
+				260133F4157DF28700526BE4 /* SameColorOrShapeRuleTest.m in Sources */,
+				260133F4157DF28700526BE7 /* RowWithUniformColorRuleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,12 +543,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QuirkleTests/TestPrefix.pch;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/3rdParty/OCMock/Headers/**";
 				INFOPLIST_FILE = "QuirkleTests/QuirkleTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/3rdParty/expecta\"",
+					"\"$(SRCROOT)/3rdParty\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/3rdParty/OCMock/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -500,12 +571,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QuirkleTests/TestPrefix.pch;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/3rdParty/OCMock/Headers/**";
 				INFOPLIST_FILE = "QuirkleTests/QuirkleTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/3rdParty/expecta\"",
+					"\"$(SRCROOT)/3rdParty\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/3rdParty/OCMock/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

@@ -1,4 +1,5 @@
 #import "Token.h"
+#import "GameRule.h"
 
 @interface TokenTest : SenTestCase
 @end
@@ -62,14 +63,6 @@
 	expect([token neighbourAtSide:TokenSideLeft]).toEqual(otherToken);
 }
 
-- (void)testCanOnlyAddOneNeighbourAtSide {
-	Token *firstToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-	Token *secondToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-	[token putNeighbour:firstToken toSide:TokenSideLeft];
-	[token putNeighbour:secondToken toSide:TokenSideLeft];
-	expect([token neighbourAtSide:TokenSideLeft]).toEqual(firstToken);
-}
-
 - (void)testIsLeftNeighbourOfItsRightNeighbour {
 	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
 	[token putNeighbour:otherToken toSide:TokenSideLeft];
@@ -94,40 +87,18 @@
 	expect([otherToken neighbourAtSide:TokenSideTop]).toEqual(token);
 }
 
-//- (void)testPuttingNeighbourChecksAllRules {
-//
-//	NSArray *rules;
-//	[token setGameRules:rules];
-//}
+- (void)testPuttingNeighbourChecksAllRules {
+	Token *otherToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
 
-- (void)testOnlyAddsSameColoredTokensAsNeighbour {
-	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
-	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
-	[yellowCircleToken putNeighbour:yellowSquareToken toSide:TokenSideLeft];
-	[yellowCircleToken putNeighbour:blueSquareToken toSide:TokenSideTop];
-	expect([yellowCircleToken neighbourAtSide:TokenSideLeft]).toEqual(yellowSquareToken);
-	expect([yellowCircleToken neighbourAtSide:TokenSideTop]).Not.toEqual(blueSquareToken);
+	id ruleMock = [OCMockObject mockForClass:[GameRule class]];
+	[[ruleMock expect] appliesToToken:otherToken atSide:TokenSideLeft];
+
+	NSArray *rules = [NSArray arrayWithObject:ruleMock];
+	[token setGameRules:rules];
+	[token putNeighbour:otherToken toSide:TokenSideLeft];
+
+	[ruleMock verify];
 }
-
-- (void)testOnlyAddsSameShapedTokenAsNeighbour {
-	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-	Token *blueCircleToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
-	Token *blueSquareToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeSquare];
-	[yellowCircleToken putNeighbour:blueCircleToken toSide:TokenSideLeft];
-	[yellowCircleToken putNeighbour:blueSquareToken toSide:TokenSideTop];
-	expect([yellowCircleToken neighbourAtSide:TokenSideLeft]).toEqual(blueCircleToken);
-	expect([yellowCircleToken neighbourAtSide:TokenSideTop]).Not.toEqual(blueSquareToken);
-}
-
-//- (void)testHasToBeSameColorOfOppositeNeighbourIfItsNotEmpty {
-//	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
-//	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
-//	Token *blueCircleToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
-//	[yellowCircleToken putNeighbour:yellowSquareToken toSide:TokenSideLeft];
-//	[yellowCircleToken putNeighbour:blueCircleToken toSide:TokenSideRight];
-//	expect([yellowCircleToken neighbourAtSide:TokenSideRight]).toBeNil();
-//}
 
 - (void)testHasToBeSameShapeOfOppositeNeighbourIfItsNotEmpty {
 	// TODO

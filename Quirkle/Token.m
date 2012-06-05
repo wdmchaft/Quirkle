@@ -22,16 +22,13 @@
 		_color = color;
 		_shape = shape;
 		_neighbours = [[NSMutableArray alloc] initWithObjects:[NSNull null], [NSNull null], [NSNull null], [NSNull null], nil];
-		GameRule *emptyNeighbourRule = [[EmptyNeighbourRule alloc] initWithToken:self];
-		GameRule *sameColorOrShapeRule = [[SameColorOrShapeRule alloc] initWithToken:self];
-		_gameRules = [[NSArray alloc] initWithObjects:emptyNeighbourRule, sameColorOrShapeRule, nil];
 	}
 	return self;
 }
 
 - (void)putNeighbour:(Token *)token toSide:(TokenSide)side {
 	BOOL allRulesApply = YES;
-	for (GameRule *rule in _gameRules) {
+	for (GameRule *rule in self.gameRules) {
 		allRulesApply &= [rule appliesToToken:token atSide:side];
 	}
 	if (allRulesApply) {
@@ -57,4 +54,12 @@
 	return [_neighbours objectAtIndex:side];
 }
 
+- (NSArray *)gameRules {
+	if (_gameRules == nil) {
+		GameRule *emptyNeighbourRule = [[EmptyNeighbourRule alloc] initWithToken:self];
+		GameRule *sameColorOrShapeRule = [[SameColorOrShapeRule alloc] initWithToken:self];
+		_gameRules = [[NSArray alloc] initWithObjects:emptyNeighbourRule, sameColorOrShapeRule, nil];
+	}
+	return _gameRules;
+}
 @end
