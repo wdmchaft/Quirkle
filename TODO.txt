@@ -3,16 +3,19 @@ Stories
 DONE
 - token has color
 - token has form
-
-TODO
 - Rules
 	- token with same color is valid
 	- token with same shape color is valid
 	- token with different color or shape is invalid
 	- all tokens in same row must have same color or same shape but only once
 
+WIP
+
 IDEAS
-- visualize token
-- let user set token
-- switch to next user
+- game with rounds
+	- let user set token
+	- switch to next user
+- count points
 - determine end of game
+	- determine winner
+- visualize token
