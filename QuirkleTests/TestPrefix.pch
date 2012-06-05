@@ -5,3 +5,10 @@
 #import "Expecta.h"
 
 #import <OCMock/OCMock.h>
+
+#define YellowCircleToken [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle]
+#define YellowSquareToken [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare]
+#define YellowTriangleToken [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeTriangle]
+#define BlueCircleToken [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle]
+#define RedCircleToken [[Token alloc] initWithColor:TokenColorRed shape:TokenShapeCircle]
+

@@ -46,8 +46,8 @@
 	expect(token.shape).toEqual(TokenShapeFlower);
 	[token setShape:TokenShapeStar];
 	expect(token.shape).toEqual(TokenShapeStar);
-	[token setShape:TokenShapeCrystal];
-	expect(token.shape).toEqual(TokenShapeCrystal);
+	[token setShape:TokenShapeCross];
+	expect(token.shape).toEqual(TokenShapeCross);
 }
 
 - (void)testInitiallyHasNoNeighbours {
@@ -100,4 +100,15 @@
 	[ruleMock verify];
 }
 
+- (void)testTokenWithSameColorAndShapeIsEqual {
+	expect(YellowCircleToken).toEqual(YellowCircleToken);
+}
+
+- (void)testTokenWithSameColorAndDifferentShapeIsNotEqual {
+	expect(YellowCircleToken).Not.toEqual(YellowSquareToken);
+}
+
+- (void)testTokenWithSameShapeAndDifferentColorIsNotEqual {
+	expect(YellowCircleToken).Not.toEqual(BlueCircleToken);
+}
 @end

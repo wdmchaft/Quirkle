@@ -1,5 +1,8 @@
 #import "RowWithUniformColorRule.h"
 
+@interface GameRule ()
+- (TokenSide)oppositeSideOf:(TokenSide)side;
+@end
 
 @implementation RowWithUniformColorRule {
 }
@@ -18,16 +21,6 @@
 		}
 	}
 	return NO;
-}
-
-- (TokenSide)oppositeSideOf:(TokenSide)side {
-	switch (side) {
-		case TokenSideLeft: return TokenSideRight;
-		case TokenSideRight: return TokenSideLeft;
-		case TokenSideTop: return TokenSideBottom;
-		case TokenSideBottom: return TokenSideTop;
-	}
-	return TokenSideLeft;
 }
 
 - (BOOL)appliesToSameColorRuleWithNeighbour:(Token *)oppositeNeighbourToken {

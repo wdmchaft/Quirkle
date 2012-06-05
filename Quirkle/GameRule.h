@@ -5,11 +5,10 @@
 
 
 @interface GameRule : NSObject
-@property (nonatomic, strong) Token *token;
 
+@property (nonatomic, strong) Token *token;
 
 - (id)initWithToken:(Token *)token;
 - (BOOL)appliesToToken:(Token *)otherToken atSide:(TokenSide)side;
-
 
 @end

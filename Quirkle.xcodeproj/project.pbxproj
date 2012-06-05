@@ -31,6 +31,8 @@
 		260133F4157DF28700526BE4 /* SameColorOrShapeRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE3 /* SameColorOrShapeRuleTest.m */; };
 		260133F4157DF28700526BE7 /* RowWithUniformColorRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */; };
 		260133F4157DF28700526BEA /* RowWithUniformColorRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE9 /* RowWithUniformColorRule.m */; };
+		260133F4157DF28700526BED /* AllTokensInRowMustBeDifferentRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BEC /* AllTokensInRowMustBeDifferentRuleTest.m */; };
+		260133F4157DF28700526BF0 /* AllTokensInRowMustBeDifferentRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BEF /* AllTokensInRowMustBeDifferentRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,9 @@
 		260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowWithUniformColorRuleTest.m; sourceTree = "<group>"; };
 		260133F4157DF28700526BE9 /* RowWithUniformColorRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowWithUniformColorRule.m; sourceTree = "<group>"; };
 		260133F4157DF28700526BEB /* RowWithUniformColorRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowWithUniformColorRule.h; sourceTree = "<group>"; };
+		260133F4157DF28700526BEC /* AllTokensInRowMustBeDifferentRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTokensInRowMustBeDifferentRuleTest.m; sourceTree = "<group>"; };
+		260133F4157DF28700526BEF /* AllTokensInRowMustBeDifferentRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTokensInRowMustBeDifferentRule.m; sourceTree = "<group>"; };
+		260133F4157DF28700526BF1 /* AllTokensInRowMustBeDifferentRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTokensInRowMustBeDifferentRule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +204,7 @@
 		2601337A157956EC00526BDF /* QuirkleTests */ = {
 			isa = PBXGroup;
 			children = (
+				260133F4157DF28700526BEC /* AllTokensInRowMustBeDifferentRuleTest.m */,
 				260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */,
 				260133F4157DF28700526BE3 /* SameColorOrShapeRuleTest.m */,
 				260133F4157DF28700526BE0 /* EmptyNeighbourRuleTest.m */,
@@ -292,6 +298,8 @@
 		260133F4157DF28700526BDF /* GameRules */ = {
 			isa = PBXGroup;
 			children = (
+				260133F4157DF28700526BF1 /* AllTokensInRowMustBeDifferentRule.h */,
+				260133F4157DF28700526BEF /* AllTokensInRowMustBeDifferentRule.m */,
 				260133F4157DF28700526BEB /* RowWithUniformColorRule.h */,
 				260133F4157DF28700526BE9 /* RowWithUniformColorRule.m */,
 				260133BD157A37E800526BEB /* GameRule.h */,
@@ -420,6 +428,7 @@
 				260133BD157A37E800526BEA /* GameRule.m in Sources */,
 				260133BD157A37E800526BED /* SameColorOrShapeRule.m in Sources */,
 				260133F4157DF28700526BEA /* RowWithUniformColorRule.m in Sources */,
+				260133F4157DF28700526BF0 /* AllTokensInRowMustBeDifferentRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +440,7 @@
 				260133F4157DF28700526BE1 /* EmptyNeighbourRuleTest.m in Sources */,
 				260133F4157DF28700526BE4 /* SameColorOrShapeRuleTest.m in Sources */,
 				260133F4157DF28700526BE7 /* RowWithUniformColorRuleTest.m in Sources */,
+				260133F4157DF28700526BED /* AllTokensInRowMustBeDifferentRuleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

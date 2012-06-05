@@ -15,7 +15,7 @@ typedef enum {
 	TokenShapeTriangle,
 	TokenShapeFlower,
 	TokenShapeStar,
-	TokenShapeCrystal
+	TokenShapeCross
 } TokenShape;
 
 typedef enum {
