@@ -94,6 +94,12 @@
 	expect([otherToken neighbourAtSide:TokenSideTop]).toEqual(token);
 }
 
+//- (void)testPuttingNeighbourChecksAllRules {
+//
+//	NSArray *rules;
+//	[token setGameRules:rules];
+//}
+
 - (void)testOnlyAddsSameColoredTokensAsNeighbour {
 	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
 	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
@@ -114,9 +120,14 @@
 	expect([yellowCircleToken neighbourAtSide:TokenSideTop]).Not.toEqual(blueSquareToken);
 }
 
-- (void)testHasToBeSameColorOfOppositeNeighbourIfItsNotEmpty {
-	// TODO
-}
+//- (void)testHasToBeSameColorOfOppositeNeighbourIfItsNotEmpty {
+//	Token *yellowCircleToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeCircle];
+//	Token *yellowSquareToken = [[Token alloc] initWithColor:TokenColorYellow shape:TokenShapeSquare];
+//	Token *blueCircleToken = [[Token alloc] initWithColor:TokenColorBlue shape:TokenShapeCircle];
+//	[yellowCircleToken putNeighbour:yellowSquareToken toSide:TokenSideLeft];
+//	[yellowCircleToken putNeighbour:blueCircleToken toSide:TokenSideRight];
+//	expect([yellowCircleToken neighbourAtSide:TokenSideRight]).toBeNil();
+//}
 
 - (void)testHasToBeSameShapeOfOppositeNeighbourIfItsNotEmpty {
 	// TODO

@@ -24,6 +24,9 @@
 		2601339B15795A4500526BE4 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601339B15795A4500526BE3 /* Token.m */; };
 		260133BC157A37AA00526BDF /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */; };
 		260133BD157A37E800526BE5 /* Row.m in Sources */ = {isa = PBXBuildFile; };
+		260133BD157A37E800526BE7 /* EmptyNeighbourRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BE6 /* EmptyNeighbourRule.m */; };
+		260133BD157A37E800526BEA /* GameRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BE9 /* GameRule.m */; };
+		260133BD157A37E800526BED /* SameColorOrShapeRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133BD157A37E800526BEC /* SameColorOrShapeRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,12 @@
 		260133BA157A379200526BDF /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
 		260133BB157A37AA00526BDF /* libExpecta-ios-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-ios-universal.a"; sourceTree = "<group>"; };
 		260133BD157A37E800526BDF /* TestPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrefix.pch; sourceTree = "<group>"; };
+		260133BD157A37E800526BE6 /* EmptyNeighbourRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyNeighbourRule.m; sourceTree = "<group>"; };
+		260133BD157A37E800526BE8 /* EmptyNeighbourRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyNeighbourRule.h; sourceTree = "<group>"; };
+		260133BD157A37E800526BE9 /* GameRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRule.m; sourceTree = "<group>"; };
+		260133BD157A37E800526BEB /* GameRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRule.h; sourceTree = "<group>"; };
+		260133BD157A37E800526BEC /* SameColorOrShapeRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameColorOrShapeRule.m; sourceTree = "<group>"; };
+		260133BD157A37E800526BEE /* SameColorOrShapeRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameColorOrShapeRule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +155,12 @@
 		26013362157956EB00526BDF /* Quirkle */ = {
 			isa = PBXGroup;
 			children = (
+				260133BD157A37E800526BEE /* SameColorOrShapeRule.h */,
+				260133BD157A37E800526BEC /* SameColorOrShapeRule.m */,
+				260133BD157A37E800526BEB /* GameRule.h */,
+				260133BD157A37E800526BE9 /* GameRule.m */,
+				260133BD157A37E800526BE8 /* EmptyNeighbourRule.h */,
+				260133BD157A37E800526BE6 /* EmptyNeighbourRule.m */,
 				2601339B15795A4500526BE5 /* Token.h */,
 				2601339B15795A4500526BE3 /* Token.m */,
 				2601336B157956EB00526BDF /* AppDelegate.h */,
@@ -340,6 +355,9 @@
 				2601339B15795A4500526BDF /* MainViewController.m in Sources */,
 				2601339B15795A4500526BE4 /* Token.m in Sources */,
 				260133BD157A37E800526BE5 /* Row.m in Sources */,
+				260133BD157A37E800526BE7 /* EmptyNeighbourRule.m in Sources */,
+				260133BD157A37E800526BEA /* GameRule.m in Sources */,
+				260133BD157A37E800526BED /* SameColorOrShapeRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

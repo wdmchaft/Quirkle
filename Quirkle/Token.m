@@ -1,14 +1,20 @@
 #import "Token.h"
+#import "GameRule.h"
+#import "EmptyNeighbourRule.h"
+#import "SameColorOrShapeRule.h"
 
 
 @implementation Token {
 	TokenColor _color;
 	TokenShape _shape;
 	NSMutableArray *_neighbours;
+	NSArray *_gameRules;
 }
 
 @synthesize color = _color;
 @synthesize shape = _shape;
+@synthesize gameRules = _gameRules;
+
 
 - (Token *)initWithColor:(TokenColor)color shape:(TokenShape)shape {
 	self = [super init];
@@ -16,12 +22,19 @@
 		_color = color;
 		_shape = shape;
 		_neighbours = [[NSMutableArray alloc] initWithObjects:[NSNull null], [NSNull null], [NSNull null], [NSNull null], nil];
+		GameRule *emptyNeighbourRule = [[EmptyNeighbourRule alloc] initWithToken:self];
+		GameRule *sameColorOrShapeRule = [[SameColorOrShapeRule alloc] initWithToken:self];
+		_gameRules = [[NSArray alloc] initWithObjects:emptyNeighbourRule, sameColorOrShapeRule, nil];
 	}
 	return self;
 }
 
 - (void)putNeighbour:(Token *)token toSide:(TokenSide)side {
-	if ([self isEmpty:side] && ([self isSameColor:token] || [self isSameShape:token])) {
+	BOOL allRulesApply = YES;
+	for (GameRule *rule in _gameRules) {
+		allRulesApply &= [rule appliesToToken:token atSide:side];
+	}
+	if (allRulesApply) {
 		[_neighbours replaceObjectAtIndex:side withObject:token];
 		[token putNeighbour:self toSide:[self oppositeSideOf:side]];
 	}
@@ -37,22 +50,11 @@
 	return TokenSideLeft;
 }
 
-- (BOOL)isEmpty:(TokenSide)side {
-	return [_neighbours objectAtIndex:side] == [NSNull null];
-}
-
-- (BOOL)isSameColor:(Token *)token {
-	return token.color == self.color;
-}
-
-- (BOOL)isSameShape:(Token *)token {
-	return self.shape == token.shape;
-}
-
 - (Token *)neighbourAtSide:(TokenSide)side {
-	if ([self isEmpty:side]) {
+	if ([_neighbours objectAtIndex:side] == [NSNull null]) {
 		return nil;
 	}
 	return [_neighbours objectAtIndex:side];
 }
+
 @end
