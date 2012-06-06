@@ -1,14 +1,19 @@
 #import "Game.h"
 #import "Token.h"
+#import "Player.h"
 
 @interface GameTest : SenTestCase
 @end
 
 @implementation GameTest {
+	Game *game;
+}
+
+- (void)setUp {
+	game = [[Game alloc] init];
 }
 
 - (void)testStartsWithAllTokens3Times {
-	Game *game = [[Game alloc] init];
 	NSArray *tokens = game.tokens;
 	expect([self tokensWithType:YellowCircleToken in:tokens].count).toEqual(3);
 	expect([self tokensWithType:YellowSquareToken in:tokens].count).toEqual(3);
@@ -61,6 +66,21 @@
 		}
 	}];
 	return result;
+}
+
+- (void)testAddTwoToFourPlayer {
+	for (int i = 0; i < 4; i++) {
+		[game addPlayer:[[Player alloc] init]];
+	}
+	expect(game.players.count).toEqual(4);
+}
+
+- (void)testTokensAreShuffledAtStart {
+	//TODO
+}
+
+- (void)testEveryPlayerPulls6TokensAtStart {
+	// TODO
 }
 
 @end

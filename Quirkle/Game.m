@@ -1,16 +1,20 @@
 #import "Game.h"
 #import "Token.h"
+#import "Player.h"
 
 
 @implementation Game {
 	NSMutableArray *_tokens;
+	NSMutableArray *_players;
 }
 @synthesize tokens = _tokens;
+@synthesize players = _players;
 
 - (id)init {
 	self = [super init];
 	if (self) {
 		[self initializeTokens];
+		_players = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
@@ -27,5 +31,7 @@
 	}
 }
 
-
+- (void)addPlayer:(Player *)player {
+	[_players addObject:player];
+}
 @end
