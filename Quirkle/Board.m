@@ -1,11 +1,10 @@
-#import "Player.h"
-#import "Token.h"
 #import "Board.h"
 
 
-@implementation Player {
+@implementation Board {
 	NSMutableArray *_tokens;
 }
+
 @synthesize tokens = _tokens;
 
 - (id)init {
@@ -14,14 +13,6 @@
 		_tokens = [[NSMutableArray alloc] init];
 	}
 	return self;
-}
-
-- (void)pullToken:(Token *)token {
-	[_tokens addObject:token];
-}
-
-- (void)putTokensToBoard:(Board *)board {
-
 }
 
 

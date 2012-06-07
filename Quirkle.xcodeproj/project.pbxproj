@@ -38,6 +38,7 @@
 		26E7828515808A5D0009DC09 /* GameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828415808A5D0009DC09 /* GameTest.m */; };
 		26E7828515808A5D0009DC0B /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; };
 		26E7828515808A5D0009DC11 /* PlayerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828515808A5D0009DC10 /* PlayerTest.m */; };
+		26E7828515808A5D0009DC14 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828515808A5D0009DC13 /* Board.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,8 @@
 		26E7828015808A4B0009DC09 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		26E7828415808A5D0009DC09 /* GameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTest.m; sourceTree = "<group>"; };
 		26E7828515808A5D0009DC10 /* PlayerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTest.m; sourceTree = "<group>"; };
+		26E7828515808A5D0009DC13 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		26E7828515808A5D0009DC15 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 		26013362157956EB00526BDF /* Quirkle */ = {
 			isa = PBXGroup;
 			children = (
+				26E7828515808A5D0009DC15 /* Board.h */,
+				26E7828515808A5D0009DC13 /* Board.m */,
 				26E7827D15808A4B0009DC09 /* Game.h */,
 				26E7827E15808A4B0009DC09 /* Game.m */,
 				26E7827F15808A4B0009DC09 /* Player.h */,
@@ -449,6 +454,7 @@
 				26E7828115808A4B0009DC09 /* Game.m in Sources */,
 				26E7828215808A4B0009DC09 /* Player.m in Sources */,
 				26E7828515808A5D0009DC0B /* NSMutableArray+Shuffling.m in Sources */,
+				26E7828515808A5D0009DC14 /* Board.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

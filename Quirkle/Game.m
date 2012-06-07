@@ -1,11 +1,15 @@
 #import "Game.h"
 #import "Token.h"
 #import "Player.h"
+#import "Board.h"
 
-@implementation Game
+@implementation Game {
+}
 
 @synthesize tokens = _tokens;
 @synthesize players = _players;
+@synthesize board = _board;
+
 
 - (id)init {
 	self = [super init];
@@ -35,6 +39,10 @@
 - (void)startGame {
 	srandom((unsigned int) time(NULL));
 	[self distributeStartTokens];
+	_board = [[Board alloc] init];
+	for (Player *player in _players) {
+//		[player putTokensToBoard:_board];
+	}
 }
 
 - (void)distributeStartTokens {

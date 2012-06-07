@@ -1,3 +1,4 @@
+#import "Board.h"
 #import "Game.h"
 #import "Token.h"
 #import "Player.h"
@@ -121,4 +122,23 @@
 	[game pullTokenForPlayer:player];
 	[gameMock verify];
 }
+
+- (void)testInitializedEmptyBoardAtStart {
+	[game startGame];
+	expect(game.board.tokens.count).toEqual(0);
+}
+
+//- (void)testAsksEveryPlayerToPutTokensToBoard {
+//	Board *board = [[Board alloc] init];
+//	[game setBoard:board];
+//	id player1 = [OCMockObject niceMockForClass:[Player class]];
+//	[[player1 expect] putTokensToBoard:board];
+//	id player2 = [OCMockObject niceMockForClass:[Player class]];
+//	[[player2 expect] putTokensToBoard:board];
+//	[game setPlayers:[NSMutableArray arrayWithObjects:player1, player2, nil]];
+//	[game startGame];
+//	[player1 verify];
+//	[player2 verify];
+//}
+
 @end
