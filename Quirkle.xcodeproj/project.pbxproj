@@ -33,6 +33,9 @@
 		260133F4157DF28700526BEA /* RowWithUniformColorRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BE9 /* RowWithUniformColorRule.m */; };
 		260133F4157DF28700526BED /* AllTokensInRowMustBeDifferentRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BEC /* AllTokensInRowMustBeDifferentRuleTest.m */; };
 		260133F4157DF28700526BF0 /* AllTokensInRowMustBeDifferentRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 260133F4157DF28700526BEF /* AllTokensInRowMustBeDifferentRule.m */; };
+		26E7828115808A4B0009DC09 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7827E15808A4B0009DC09 /* Game.m */; };
+		26E7828215808A4B0009DC09 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828015808A4B0009DC09 /* Player.m */; };
+		26E7828515808A5D0009DC09 /* GameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828415808A5D0009DC09 /* GameTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,11 @@
 		260133F4157DF28700526BEC /* AllTokensInRowMustBeDifferentRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTokensInRowMustBeDifferentRuleTest.m; sourceTree = "<group>"; };
 		260133F4157DF28700526BEF /* AllTokensInRowMustBeDifferentRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTokensInRowMustBeDifferentRule.m; sourceTree = "<group>"; };
 		260133F4157DF28700526BF1 /* AllTokensInRowMustBeDifferentRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTokensInRowMustBeDifferentRule.h; sourceTree = "<group>"; };
+		26E7827D15808A4B0009DC09 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		26E7827E15808A4B0009DC09 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		26E7827F15808A4B0009DC09 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		26E7828015808A4B0009DC09 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		26E7828415808A5D0009DC09 /* GameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,10 @@
 		26013362157956EB00526BDF /* Quirkle */ = {
 			isa = PBXGroup;
 			children = (
+				26E7827D15808A4B0009DC09 /* Game.h */,
+				26E7827E15808A4B0009DC09 /* Game.m */,
+				26E7827F15808A4B0009DC09 /* Player.h */,
+				26E7828015808A4B0009DC09 /* Player.m */,
 				260133F4157DF28700526BDF /* GameRules */,
 				2601336B157956EB00526BDF /* AppDelegate.h */,
 				2601336C157956EB00526BDF /* AppDelegate.m */,
@@ -204,6 +216,7 @@
 		2601337A157956EC00526BDF /* QuirkleTests */ = {
 			isa = PBXGroup;
 			children = (
+				26E7828415808A5D0009DC09 /* GameTest.m */,
 				260133F4157DF28700526BEC /* AllTokensInRowMustBeDifferentRuleTest.m */,
 				260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */,
 				260133F4157DF28700526BE3 /* SameColorOrShapeRuleTest.m */,
@@ -429,6 +442,8 @@
 				260133BD157A37E800526BED /* SameColorOrShapeRule.m in Sources */,
 				260133F4157DF28700526BEA /* RowWithUniformColorRule.m in Sources */,
 				260133F4157DF28700526BF0 /* AllTokensInRowMustBeDifferentRule.m in Sources */,
+				26E7828115808A4B0009DC09 /* Game.m in Sources */,
+				26E7828215808A4B0009DC09 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +456,7 @@
 				260133F4157DF28700526BE4 /* SameColorOrShapeRuleTest.m in Sources */,
 				260133F4157DF28700526BE7 /* RowWithUniformColorRuleTest.m in Sources */,
 				260133F4157DF28700526BED /* AllTokensInRowMustBeDifferentRuleTest.m in Sources */,
+				26E7828515808A5D0009DC09 /* GameTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
