@@ -1,8 +1,6 @@
 #import "Game.h"
 #import "Token.h"
 #import "Player.h"
-#import "NSMutableArray+Shuffling.h"
-
 
 @implementation Game
 
@@ -35,6 +33,28 @@
 }
 
 - (void)startGame {
-	[_tokens shuffle];
+	srandom((unsigned int) time(NULL));
+	[self distributeStartTokens];
 }
+
+- (void)distributeStartTokens {
+	[_players enumerateObjectsUsingBlock:^(Player *player, NSUInteger idx, BOOL *stop) {
+		int startTokenAmount = 6;
+		for (int i=0; i< startTokenAmount; i++) {
+			[self pullTokenForPlayer:player];
+		}
+	}];
+}
+
+- (void)pullTokenForPlayer:(Player *)player {
+	NSUInteger randomIndex = [self randomizedTokenIndex];
+	Token *token = [_tokens objectAtIndex:randomIndex];
+	[player pullToken:token];
+	[_tokens removeObjectAtIndex:randomIndex];
+}
+
+- (NSUInteger)randomizedTokenIndex {
+	return (NSUInteger) (random() % _tokens.count);
+}
+
 @end

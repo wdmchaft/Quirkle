@@ -36,8 +36,7 @@
 		26E7828115808A4B0009DC09 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7827E15808A4B0009DC09 /* Game.m */; };
 		26E7828215808A4B0009DC09 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828015808A4B0009DC09 /* Player.m */; };
 		26E7828515808A5D0009DC09 /* GameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828415808A5D0009DC09 /* GameTest.m */; };
-		26E7828515808A5D0009DC0B /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828515808A5D0009DC0A /* NSMutableArray+Shuffling.m */; };
-		26E7828515808A5D0009DC0E /* NSArrayShuffleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7828515808A5D0009DC0D /* NSArrayShuffleTest.m */; };
+		26E7828515808A5D0009DC0B /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +123,6 @@
 		26E7827F15808A4B0009DC09 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		26E7828015808A4B0009DC09 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		26E7828415808A5D0009DC09 /* GameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTest.m; sourceTree = "<group>"; };
-		26E7828515808A5D0009DC0A /* NSMutableArray+Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffling.m"; sourceTree = "<group>"; };
-		26E7828515808A5D0009DC0C /* NSMutableArray+Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffling.h"; sourceTree = "<group>"; };
-		26E7828515808A5D0009DC0D /* NSArrayShuffleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayShuffleTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +186,6 @@
 		26013362157956EB00526BDF /* Quirkle */ = {
 			isa = PBXGroup;
 			children = (
-				26E7828515808A5D0009DC0C /* NSMutableArray+Shuffling.h */,
-				26E7828515808A5D0009DC0A /* NSMutableArray+Shuffling.m */,
 				26E7827D15808A4B0009DC09 /* Game.h */,
 				26E7827E15808A4B0009DC09 /* Game.m */,
 				26E7827F15808A4B0009DC09 /* Player.h */,
@@ -223,7 +217,6 @@
 		2601337A157956EC00526BDF /* QuirkleTests */ = {
 			isa = PBXGroup;
 			children = (
-				26E7828515808A5D0009DC0D /* NSArrayShuffleTest.m */,
 				26E7828415808A5D0009DC09 /* GameTest.m */,
 				260133F4157DF28700526BEC /* AllTokensInRowMustBeDifferentRuleTest.m */,
 				260133F4157DF28700526BE6 /* RowWithUniformColorRuleTest.m */,
@@ -466,7 +459,6 @@
 				260133F4157DF28700526BE7 /* RowWithUniformColorRuleTest.m in Sources */,
 				260133F4157DF28700526BED /* AllTokensInRowMustBeDifferentRuleTest.m in Sources */,
 				26E7828515808A5D0009DC09 /* GameTest.m in Sources */,
-				26E7828515808A5D0009DC0E /* NSArrayShuffleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

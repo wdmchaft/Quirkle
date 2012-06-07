@@ -1,16 +1,20 @@
 #import "Game.h"
 #import "Token.h"
 #import "Player.h"
-#import "NSMutableArray+Shuffling.h"
 
 @interface Game(TestSetter)
-- (void)setTokens:(NSMutableArray *)tokens;
+- (void)setPlayers:(NSMutableArray *)players;
 @end
 
 @implementation Game(TestSetter)
-- (void)setTokens:(NSMutableArray *)tokens {
-	_tokens = tokens;
+- (void)setPlayers:(NSMutableArray *)players {
+	_players = players;
 }
+@end
+
+@interface Game()
+- (void)pullTokenForPlayer:(Player *)player;
+- (NSUInteger)randomizedTokenIndex;
 @end
 
 @interface GameTest : SenTestCase
@@ -22,6 +26,10 @@
 
 - (void)setUp {
 	game = [[Game alloc] init];
+}
+
+- (void)tearDown {
+	game = nil;
 }
 
 - (void)testStartsWithAllTokens3Times {
@@ -86,16 +94,31 @@
 	expect(game.players.count).toEqual(4);
 }
 
-- (void)testTokensAreShuffledAtStart {
-	id tokens = [OCMockObject mockForClass:[NSMutableArray class]];
-	[[tokens expect] shuffle];
-	[game setTokens:tokens];
-	[game startGame];
-	[tokens verify];
-}
-
 - (void)testEveryPlayerPulls6TokensAtStart {
-	// TODO
+	id player = [OCMockObject mockForClass:[Player class]];
+	[[player expect] pullToken:OCMOCK_ANY];
+	[[player expect] pullToken:OCMOCK_ANY];
+	[[player expect] pullToken:OCMOCK_ANY];
+	[[player expect] pullToken:OCMOCK_ANY];
+	[[player expect] pullToken:OCMOCK_ANY];
+	[[player expect] pullToken:OCMOCK_ANY];
+	[game setPlayers:[NSMutableArray arrayWithObject:player]];
+	[game startGame];
+	[player verify];
 }
 
+- (void)testPullingTokensReduzesAmountOfTokensInGame {
+	int amount = game.tokens.count;
+	Player *player = [OCMockObject niceMockForClass:[Player class]];
+	[game pullTokenForPlayer:player];
+	expect(game.tokens.count).toEqual(amount - 1);
+}
+
+- (void)testPullingTokenIsRandomized {
+	id gameMock = [OCMockObject partialMockForObject:game];
+	[[gameMock expect] randomizedTokenIndex];
+	Player *player = [OCMockObject niceMockForClass:[Player class]];
+	[game pullTokenForPlayer:player];
+	[gameMock verify];
+}
 @end
