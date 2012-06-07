@@ -1,4 +1,5 @@
 #import "MainViewController.h"
+#import "Game.h"
 
 @interface MainViewController ()
 

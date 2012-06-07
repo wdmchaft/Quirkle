@@ -1,12 +1,11 @@
 #import "Game.h"
 #import "Token.h"
 #import "Player.h"
+#import "NSMutableArray+Shuffling.h"
 
 
-@implementation Game {
-	NSMutableArray *_tokens;
-	NSMutableArray *_players;
-}
+@implementation Game
+
 @synthesize tokens = _tokens;
 @synthesize players = _players;
 
@@ -33,5 +32,9 @@
 
 - (void)addPlayer:(Player *)player {
 	[_players addObject:player];
+}
+
+- (void)startGame {
+	[_tokens shuffle];
 }
 @end

@@ -1,6 +1,17 @@
 #import "Game.h"
 #import "Token.h"
 #import "Player.h"
+#import "NSMutableArray+Shuffling.h"
+
+@interface Game(TestSetter)
+- (void)setTokens:(NSMutableArray *)tokens;
+@end
+
+@implementation Game(TestSetter)
+- (void)setTokens:(NSMutableArray *)tokens {
+	_tokens = tokens;
+}
+@end
 
 @interface GameTest : SenTestCase
 @end
@@ -76,7 +87,11 @@
 }
 
 - (void)testTokensAreShuffledAtStart {
-	//TODO
+	id tokens = [OCMockObject mockForClass:[NSMutableArray class]];
+	[[tokens expect] shuffle];
+	[game setTokens:tokens];
+	[game startGame];
+	[tokens verify];
 }
 
 - (void)testEveryPlayerPulls6TokensAtStart {
